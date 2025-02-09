@@ -1,0 +1,24 @@
+{
+    "name": "my-electron-app",
+    "version": "1.0.0",
+    "description": "A simple accounting application using Electron.js",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "electron:clean-cache": "rimraf node_modules/electron/dist"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "electron": "^13.1.7",
+        "rimraf": "^6.0.1"
+    },
+    "dependencies": {
+        "body-parser": "^1.20.3",
+        "cors": "^2.8.5",
+        "express": "^4.21.2",
+        "firebase": "^11.3.0",
+        "mysql2": "^3.12.0"
+    }
+}
