@@ -71,11 +71,17 @@
         .form-group button:hover {
             background-color: #45a049;
         }
+
+        /* Center the table headers */
+        th:first-child {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>تطبيق محاسبة</h1>
+
         <!-- Form for adding transactions -->
         <div class="form-group">
             <label for="account">الحساب:</label>
@@ -127,6 +133,7 @@
         <div class="form-group">
             <button onclick="showPreviousRecord()">عرض السجل السابق</button>
         </div>
+
         <!-- Table to display transactions -->
         <table id="transactionsTable">
             <thead>
@@ -143,9 +150,131 @@
             <tbody>
             </tbody>
         </table>
+
+        <!-- Display total amount -->
         <div class="total">
             <span>الإجمالي:</span>
             <span id="totalAmount">0</span>
+        </div>
+
+        <!-- Display income details -->
+        <div class="income-details">
+            <h2 style="text-align: center;">الأرباح</h2>
+            <table id="incomeTable">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>جنيه مصري</th>
+                        <th>يورو</th>
+                        <th>دولار</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>عامر</td>
+                        <td id="amrEgp"></td>
+                        <td id="amrEuro"></td>
+                        <td id="amrDollar"></td>
+                    </tr>
+                    <tr>
+                        <td>تامر</td>
+                        <td id="tamerEgp"></td>
+                        <td id="tamerEuro"></td>
+                        <td id="tamerDollar"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Display total available balance -->
+        <div class="total-available-balance">
+            <h2 style="text-align: center;">إجمالي الرصيد المتاح بالشركة</h2>
+            <table id="totalAvailableBalanceTable">
+                <thead>
+                    <tr>
+                        <th>جنيه مصري</th>
+                        <th>يورو</th>
+                        <th>دولار</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="totalEgp"></td>
+                        <td id="totalEuro"></td>
+                        <td id="totalDollar"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Display in Tamer's account -->
+        <div class="in-tamer-account">
+            <h2 style="text-align: center;">في حساب تامر</h2>
+            <table id="inTamerAccountTable">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>جنيه مصري</th>
+                        <th>يورو</th>
+                        <th>دولار</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>كاش</td>
+                        <td id="tamerCashEgp"></td>
+                        <td id="tamerCashEuro"></td>
+                        <td id="tamerCashDollar"></td>
+                    </tr>
+                    <tr>
+                        <td>وايزر</td>
+                        <td id="tamerWazirEgp"></td>
+                        <td id="tamerWazirEuro"></td>
+                        <td id="tamerWazirDollar"></td>
+                    </tr>
+                    <tr>
+                        <td>فودافون كاش</td>
+                        <td id="tamerVodafoneCashEgp"></td>
+                        <td id="tamerVodafoneCashEuro"></td>
+                        <td id="tamerVodafoneCashDollar"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Display in Amr's account -->
+        <div class="in-amr-account">
+            <h2 style="text-align: center;">في حساب عامر</h2>
+            <table id="inAmrAccountTable">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>جنيه مصري</th>
+                        <th>يورو</th>
+                        <th>دولار</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>كاش</td>
+                        <td id="amrCashEgp"></td>
+                        <td id="amrCashEuro"></td>
+                        <td id="amrCashDollar"></td>
+                    </tr>
+                    <tr>
+                        <td>وايزر</td>
+                        <td id="amrWazirEgp"></td>
+                        <td id="amrWazirEuro"></td>
+                        <td id="amrWazirDollar"></td>
+                    </tr>
+                    <tr>
+                        <td>فودافون كاش</td>
+                        <td id="amrVodafoneCashEgp"></td>
+                        <td id="amrVodafoneCashEuro"></td>
+                        <td id="amrVodafoneCashDollar"></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
     <script src="script.js"></script>
